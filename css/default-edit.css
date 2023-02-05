@@ -16,7 +16,7 @@
 }
 .default-button:hover {
     color: #fff;
-    background: var(--theme__color1);
+    background: #0196b1;
 }
 /* ---buttons---end */
 
