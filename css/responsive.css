@@ -141,10 +141,15 @@
     .gc__row {
         gap: 30px;
     }
+
+
+    .hero-slide {
+        height: 400px;
+    }
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .header__logo {
         width: 80px;
     }
@@ -314,6 +319,11 @@
     }
     .gc-section {
         padding: 30px 0 60px;
+    }
+
+
+    .hero-slide {
+        height: 500px;
     }
 }
 

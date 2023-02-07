@@ -25,30 +25,51 @@
   });
 
   // owl-carousel
-  $(".brand-active").owlCarousel({
+  $(".hero-slider-active").owlCarousel({
     loop: true,
-    margin: 50,
+    margin: 0,
     responsiveClass: true,
     nav: false,
+    dots: false,
+    items: 1,
     navText: [
       '<span class="fas fa-chevron-left fa-2x"></span>',
       '<span class="fas fa-chevron-right fa-2x"></span>',
     ],
-    responsive: {
-      0: {
-        items: 1,
+  });
+  function owlInitialize() {
+    let slider = $(".remixed__mobile__slider");
+    if ($(window).width() < 767) {
+      slider.addClass("owl-carousel");
+      slider.owlCarousel({
+        loop: true,
+        margin: 19,
+        responsiveClass: true,
         nav: false,
-      },
-      600: {
-        items: 3,
-        nav: false,
-      },
-      1000: {
-        items: 4,
-        nav: false,
-        loop: false,
-      },
-    },
+        dots: false,
+        navText: [
+          '<span class="fas fa-chevron-left fa-2x"></span>',
+          '<span class="fas fa-chevron-right fa-2x"></span>',
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 1,
+          },
+        },
+      });
+    } else {
+      slider.owlCarousel("destroy");
+      slider.removeClass("owl-carousel");
+    }
+  }
+  $(document).ready(function (e) {
+    owlInitialize();
+  });
+  $(window).resize(function () {
+    owlInitialize();
   });
 
   $(".beforeAfter").beforeAfter({

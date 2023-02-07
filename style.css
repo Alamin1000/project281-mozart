@@ -391,6 +391,33 @@ p:last-child{
 /* ---common-content---end */
 
 
+/* ---hero-slider-section--- */
+.hero-slider-section {
+
+}
+.hero-slider-section__inner {
+
+}
+.hero-slider {
+
+}
+.hero-slide {
+  background: var(--theme__color2);
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-slide .sl-image {
+  height: 100%;
+  width: auto !important;
+  flex-shrink: 0;
+  max-width: initial;
+}
+/* ---hero-slider-section---end */
+
+
 
 /* ---remixed-section--- */
 .remixed-section {
